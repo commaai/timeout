@@ -1,0 +1,11 @@
+name: 'Timeout'
+description: 'Fail a job if it took more than `timeout` seconds'
+inputs:
+  timeout:
+    description: 'Maximum job duration allowed'
+    required: false 
+    default: 60
+runs:
+  using: 'node20'
+  main: 'index.js'
+  post: 'post.js'
